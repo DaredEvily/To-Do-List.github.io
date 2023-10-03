@@ -1,0 +1,102 @@
+*{padding: 0px;margin: 0px;user-select: none;}
+
+body{font-family: 'Dancing Script', cursive;background-image: -webkit-linear-gradient(65deg,#062925 50% , #B8E1DD 50%);color: white;}
+
+.contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.in{
+    display: flex;
+    flex-direction: column;
+    margin: 3% 0%;
+    width: 28%;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    background-color: #062925;
+    height: 70px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(60, 60, 60, 0.564);
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 10%;
+}
+.midd{
+    /* background-color: #FFEBB4; */
+    background-color: white;
+    color: black;
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+}
+.formm{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid rgba(100, 100, 100, 0.212);
+}
+.formm:last-child{border-bottom:0;}
+.midd .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item p {
+    text-align: left;
+    width: 90%;
+    padding: 5%;
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.item input{width: 10%;height: 100%;}
+.item input:checked + p {text-decoration:line-through;color: #14786c;}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.form input{
+    flex: 8;
+    margin: 1%;
+    height: 90%;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: inset 0 -3px 0 0 #062925;
+    width: 100%;
+}
+.form input:focus{border: none;outline: none;}
+.form input:placeholder-shown{box-shadow: none;}
+.form input:placeholder-shown ~ button{display: none;}
+button:active{opacity: .5}
+.form button{
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    height: 75%;
+    width: 12.5%;
+    background-color: #062925;
+    border-radius: 50%;
+}
+.midd , form{box-shadow:2px 2px 5px rgba(60, 60, 60, 0.564);}
+footer{margin: 2%;}
+
+@media (max-width:960px){
+    .in{
+    width: 70%;
+    }
+}

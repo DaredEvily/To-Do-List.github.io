@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/views/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contain">
+        <div class="in">
+            <div class="header">
+            <h1><%= theday %> </h1>
+            </div>
+            <div class="midd">
+                <% newlistitem.forEach((item)=>{ %>
+                    <form action="/delete" method="post" class="formm">
+                        <div class="item">
+                            <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+                            <p><%= item.name %></p>
+                        </div>
+                    </form>
+                <% }) %>
+            </div>
+            <form action="/" method="post" class="form">
+                <input type="text" name="newitem" placeholder="New Item" autocomplete="off">
+                <button type="submit" name="btn">+</button>
+            </form>
+            <footer>Made With ❤️ &copy; Ahmad Gamal .</footer>
+        </div>
+    </div>
+    <script>
+        $("html").fadeOut(50).fadeIn(100)
+    </script>
+</body>
+</html>
